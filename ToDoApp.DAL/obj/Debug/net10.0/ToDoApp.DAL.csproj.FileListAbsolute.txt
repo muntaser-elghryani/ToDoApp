@@ -1,0 +1,14 @@
+E:\back-end\ToDoApp\ToDoApp.DAL\bin\Debug\net10.0\ToDoApp.DAL.deps.json
+E:\back-end\ToDoApp\ToDoApp.DAL\bin\Debug\net10.0\ToDoApp.DAL.runtimeconfig.json
+E:\back-end\ToDoApp\ToDoApp.DAL\bin\Debug\net10.0\ToDoApp.DAL.dll
+E:\back-end\ToDoApp\ToDoApp.DAL\bin\Debug\net10.0\ToDoApp.DAL.pdb
+E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\ToDoApp.DAL.csproj.AssemblyReference.cache
+E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\ToDoApp.DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\ToDoApp.DAL.AssemblyInfoInputs.cache
+E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\ToDoApp.DAL.AssemblyInfo.cs
+E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\ToDoApp.DAL.csproj.CoreCompileInputs.cache
+E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\ToDoApp.DAL.dll
+E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\refint\ToDoApp.DAL.dll
+E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\ToDoApp.DAL.pdb
+E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\ToDoApp.DAL.genruntimeconfig.cache
+E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\ref\ToDoApp.DAL.dll

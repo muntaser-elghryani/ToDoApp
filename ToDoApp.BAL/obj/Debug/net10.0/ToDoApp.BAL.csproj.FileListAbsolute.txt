@@ -1,0 +1,15 @@
+E:\back-end\ToDoApp\ToDoApp.BAL\bin\Debug\net10.0\ToDoApp.BAL.deps.json
+E:\back-end\ToDoApp\ToDoApp.BAL\bin\Debug\net10.0\ToDoApp.BAL.dll
+E:\back-end\ToDoApp\ToDoApp.BAL\bin\Debug\net10.0\ToDoApp.BAL.pdb
+E:\back-end\ToDoApp\ToDoApp.BAL\bin\Debug\net10.0\ToDoApp.DAL.dll
+E:\back-end\ToDoApp\ToDoApp.BAL\bin\Debug\net10.0\ToDoApp.DAL.pdb
+E:\back-end\ToDoApp\ToDoApp.BAL\obj\Debug\net10.0\ToDoApp.BAL.csproj.AssemblyReference.cache
+E:\back-end\ToDoApp\ToDoApp.BAL\obj\Debug\net10.0\ToDoApp.BAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\back-end\ToDoApp\ToDoApp.BAL\obj\Debug\net10.0\ToDoApp.BAL.AssemblyInfoInputs.cache
+E:\back-end\ToDoApp\ToDoApp.BAL\obj\Debug\net10.0\ToDoApp.BAL.AssemblyInfo.cs
+E:\back-end\ToDoApp\ToDoApp.BAL\obj\Debug\net10.0\ToDoApp.BAL.csproj.CoreCompileInputs.cache
+E:\back-end\ToDoApp\ToDoApp.BAL\obj\Debug\net10.0\ToDoApp..D1AD6696.Up2Date
+E:\back-end\ToDoApp\ToDoApp.BAL\obj\Debug\net10.0\ToDoApp.BAL.dll
+E:\back-end\ToDoApp\ToDoApp.BAL\obj\Debug\net10.0\refint\ToDoApp.BAL.dll
+E:\back-end\ToDoApp\ToDoApp.BAL\obj\Debug\net10.0\ToDoApp.BAL.pdb
+E:\back-end\ToDoApp\ToDoApp.BAL\obj\Debug\net10.0\ref\ToDoApp.BAL.dll
