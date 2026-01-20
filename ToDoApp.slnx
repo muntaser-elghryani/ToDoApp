@@ -2,4 +2,5 @@
   <Project Path="ToDoApp.Api/ToDoApp.Api.csproj" />
   <Project Path="ToDoApp.BAL/ToDoApp.BAL.csproj" />
   <Project Path="ToDoApp.DAL/ToDoApp.DAL.csproj" />
+  <Project Path="ToDoApp.Dtos/ToDoApp.Dtos.csproj" Id="94c00ea9-21fb-4bdd-8417-6eb8b1fe60c5" />
 </Solution>

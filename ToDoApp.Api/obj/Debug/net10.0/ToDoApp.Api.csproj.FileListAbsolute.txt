@@ -164,3 +164,10 @@ E:\back-end\ToDoApp\ToDoApp.Api\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Work
 E:\back-end\ToDoApp\ToDoApp.Api\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 E:\back-end\ToDoApp\ToDoApp.Api\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 E:\back-end\ToDoApp\ToDoApp.Api\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\back-end\ToDoApp\ToDoApp.Api\bin\Debug\net10.0\ToDoApp.Dtos.dll
+E:\back-end\ToDoApp\ToDoApp.Api\bin\Debug\net10.0\ToDoApp.Dtos.pdb
+E:\back-end\ToDoApp\ToDoApp.Api\obj\Debug\net10.0\ToDoApp.Api.sourcelink.json
+E:\back-end\ToDoApp\ToDoApp.Api\bin\Debug\net10.0\FluentValidation.dll
+E:\back-end\ToDoApp\ToDoApp.Api\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
+E:\back-end\ToDoApp\ToDoApp.Api\bin\Debug\net10.0\FluentValidation.AspNetCore.dll
+E:\back-end\ToDoApp\ToDoApp.Api\bin\Debug\net10.0\BCrypt.Net-Next.dll

@@ -7,7 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ToDoApp.DAL\ToDoApp.DAL.csproj" />
+    <ProjectReference Include="..\ToDoApp.Dtos\ToDoApp.Dtos.csproj" />
   </ItemGroup>
 
 </Project>

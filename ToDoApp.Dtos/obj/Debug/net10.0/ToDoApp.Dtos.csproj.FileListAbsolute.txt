@@ -1,0 +1,12 @@
+E:\back-end\ToDoApp\ToDoApp.Dtos\bin\Debug\net10.0\ToDoApp.Dtos.deps.json
+E:\back-end\ToDoApp\ToDoApp.Dtos\bin\Debug\net10.0\ToDoApp.Dtos.dll
+E:\back-end\ToDoApp\ToDoApp.Dtos\bin\Debug\net10.0\ToDoApp.Dtos.pdb
+E:\back-end\ToDoApp\ToDoApp.Dtos\obj\Debug\net10.0\ToDoApp.Dtos.GeneratedMSBuildEditorConfig.editorconfig
+E:\back-end\ToDoApp\ToDoApp.Dtos\obj\Debug\net10.0\ToDoApp.Dtos.AssemblyInfoInputs.cache
+E:\back-end\ToDoApp\ToDoApp.Dtos\obj\Debug\net10.0\ToDoApp.Dtos.AssemblyInfo.cs
+E:\back-end\ToDoApp\ToDoApp.Dtos\obj\Debug\net10.0\ToDoApp.Dtos.csproj.CoreCompileInputs.cache
+E:\back-end\ToDoApp\ToDoApp.Dtos\obj\Debug\net10.0\ToDoApp.Dtos.sourcelink.json
+E:\back-end\ToDoApp\ToDoApp.Dtos\obj\Debug\net10.0\ToDoApp.Dtos.dll
+E:\back-end\ToDoApp\ToDoApp.Dtos\obj\Debug\net10.0\refint\ToDoApp.Dtos.dll
+E:\back-end\ToDoApp\ToDoApp.Dtos\obj\Debug\net10.0\ToDoApp.Dtos.pdb
+E:\back-end\ToDoApp\ToDoApp.Dtos\obj\Debug\net10.0\ref\ToDoApp.Dtos.dll

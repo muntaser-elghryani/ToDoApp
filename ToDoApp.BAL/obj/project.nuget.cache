@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "HGsTU0p6eVA=",
+  "dgSpecHash": "OMwHTECdOBQ=",
   "success": true,
   "projectFilePath": "E:\\back-end\\ToDoApp\\ToDoApp.BAL\\ToDoApp.BAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\munta\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\munta\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
+    "C:\\Users\\munta\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\munta\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
     "C:\\Users\\munta\\.nuget\\packages\\microsoft.bcl.cryptography\\9.0.4\\microsoft.bcl.cryptography.9.0.4.nupkg.sha512",
     "C:\\Users\\munta\\.nuget\\packages\\microsoft.data.sqlclient\\6.1.1\\microsoft.data.sqlclient.6.1.1.nupkg.sha512",

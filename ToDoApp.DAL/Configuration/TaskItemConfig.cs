@@ -24,6 +24,7 @@ namespace ToDoApp.DAL.Configuration
                    .HasMaxLength(1000);
 
             builder.Property(t => t.Status)
+                   .HasColumnType("varchar(50)")
                    .IsRequired();
 
             builder.Property(t => t.DueDate)

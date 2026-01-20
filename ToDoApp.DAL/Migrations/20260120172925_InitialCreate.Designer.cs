@@ -12,7 +12,7 @@ using ToDoApp.DAL;
 namespace ToDoApp.DAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260120110204_InitialCreate")]
+    [Migration("20260120172925_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -84,8 +84,9 @@ namespace ToDoApp.DAL.Migrations
                     b.Property<DateTime>("DueDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
                     b.Property<int>("TeamId")
                         .HasColumnType("int");
@@ -167,8 +168,9 @@ namespace ToDoApp.DAL.Migrations
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
                     b.Property<int?>("TeamId")
                         .HasColumnType("int");
@@ -177,6 +179,9 @@ namespace ToDoApp.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Phone")
+                        .IsUnique();
 
                     b.HasIndex("RoleId");
 

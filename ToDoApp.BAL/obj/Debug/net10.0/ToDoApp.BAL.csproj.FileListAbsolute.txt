@@ -13,3 +13,6 @@ E:\back-end\ToDoApp\ToDoApp.BAL\obj\Debug\net10.0\ToDoApp.BAL.dll
 E:\back-end\ToDoApp\ToDoApp.BAL\obj\Debug\net10.0\refint\ToDoApp.BAL.dll
 E:\back-end\ToDoApp\ToDoApp.BAL\obj\Debug\net10.0\ToDoApp.BAL.pdb
 E:\back-end\ToDoApp\ToDoApp.BAL\obj\Debug\net10.0\ref\ToDoApp.BAL.dll
+E:\back-end\ToDoApp\ToDoApp.BAL\obj\Debug\net10.0\ToDoApp.BAL.sourcelink.json
+E:\back-end\ToDoApp\ToDoApp.BAL\bin\Debug\net10.0\ToDoApp.Dtos.dll
+E:\back-end\ToDoApp\ToDoApp.BAL\bin\Debug\net10.0\ToDoApp.Dtos.pdb

@@ -22,12 +22,15 @@ namespace ToDoApp.DAL.Configuration
             builder.Property(u => u.Phone)
                    .IsRequired()
                    .HasMaxLength(20);
+            builder.HasIndex(u => u.Phone)
+                .IsUnique();
 
             builder.Property(u => u.Password)
                    .IsRequired()
                    .HasMaxLength(256);
 
             builder.Property(u => u.Status)
+                    .HasColumnType("varchar(50)")
                    .IsRequired();
 
             builder.Property(u => u.CreatedAt)

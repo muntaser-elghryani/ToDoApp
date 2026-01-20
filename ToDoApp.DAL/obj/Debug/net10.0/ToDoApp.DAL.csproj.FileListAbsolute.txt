@@ -12,3 +12,4 @@ E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\refint\ToDoApp.DAL.dll
 E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\ToDoApp.DAL.pdb
 E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\ToDoApp.DAL.genruntimeconfig.cache
 E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\ref\ToDoApp.DAL.dll
+E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\ToDoApp.DAL.sourcelink.json
