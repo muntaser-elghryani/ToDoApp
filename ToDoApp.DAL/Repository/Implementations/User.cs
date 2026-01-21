@@ -16,14 +16,28 @@ namespace ToDoApp.DAL.Repository.Implementations
         {
             _Context = appDbContext;
         }
-       
+
+        public async Task<bool> PhoneExists(string Phone)
+        {
+            return await _Context.Users.AnyAsync(u => u.Phone == Phone);
+        }
 
         public async Task<Entities.User> CreateUser(Entities.User user)
         {
-            await _Context.Users.AddAsync(user);
-            await _Context.SaveChangesAsync();
+            try
+            {
 
-            return user;
+                await _Context.Users.AddAsync(user);
+                await _Context.SaveChangesAsync();
+                return user;
+            }
+            catch (Exception ex)
+            {
+                {
+                    throw new Exception(ex.Message);
+                }
+
+            }
         }
     }
 }

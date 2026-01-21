@@ -7,6 +7,7 @@ using ToDoApp.BAL.Interfaces;
 using ToDoApp.DAL;
 using ToDoApp.DAL.Repository.Implementations;
 using ToDoApp.DAL.Repository.Interface;
+using ToDoApp.DAL.Repository.Interfaces;
 
 namespace ToDoApp.Api
 {
@@ -29,10 +30,11 @@ namespace ToDoApp.Api
 
             //DI services DAL
             builder.Services.AddScoped<IUser, User>();
-
+            builder.Services.AddScoped<ITeam, Team>();
 
             //DI services BAL
             builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<ITeamService, TeamService>();
 
 
             builder.Services.AddControllers();

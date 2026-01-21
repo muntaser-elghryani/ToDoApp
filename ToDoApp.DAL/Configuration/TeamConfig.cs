@@ -23,7 +23,9 @@ namespace ToDoApp.DAL.Configuration
                    .HasMaxLength(100);
 
             builder.Property(t => t.ManagerId)
-                .IsRequired();
+                .IsRequired(false);
+            builder.HasIndex(t => t.ManagerId)
+                .IsUnique();
 
 
             builder.Property(t => t.CreatedAt)
@@ -34,10 +36,6 @@ namespace ToDoApp.DAL.Configuration
                    .IsRequired();
 
 
-            builder.HasMany(u => u.Users)
-                .WithOne(u => u.Team)
-                .HasForeignKey(u => u.TeamId)
-                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

@@ -29,6 +29,9 @@ namespace ToDoApp.DAL.Configuration
                    .IsRequired()
                    .HasMaxLength(256);
 
+            builder.Property(u => u.TeamId)
+                .IsRequired(false);
+
             builder.Property(u => u.Status)
                     .HasColumnType("varchar(50)")
                    .IsRequired();
@@ -44,7 +47,12 @@ namespace ToDoApp.DAL.Configuration
                 .HasForeignKey(u => u.RoleId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-          
+
+            builder.HasOne(u => u.Team)
+                .WithMany(u => u.Users)
+                .HasForeignKey(u => u.TeamId)
+                .OnDelete(DeleteBehavior.SetNull);
+
 
 
 

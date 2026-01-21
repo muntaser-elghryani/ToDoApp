@@ -19,7 +19,15 @@ namespace ToDoApp.Api.Controllers
         [HttpPost]
         public async Task<ActionResult> CreatUser(CreateUserDto creatUserDto)
         {
+            try
+            {
                 return Ok(await _userService.CreateUser(creatUserDto));
+            }
+            catch
+            {
+                return BadRequest("phone number already exists");
+            }
+
         }  
 
     }

@@ -1,5 +1,51 @@
 [
   {
+    "ContainingType": "ToDoApp.Api.Controllers.TeamController",
+    "Method": "CreateTeam",
+    "RelativePath": "api/Team",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createTeamDto",
+        "Type": "ToDoApp.Dtos.TeamDtos.CreateTeamDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ToDoApp.Dtos.TeamDtos.GetTeamDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ToDoApp.Api.Controllers.TeamController",
+    "Method": "GetAllTeam",
+    "RelativePath": "api/Team",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ToDoApp.Dtos.TeamDtos.GetTeamDto, ToDoApp.Dtos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "ToDoApp.Api.Controllers.UserController",
     "Method": "CreatUser",
     "RelativePath": "api/User",

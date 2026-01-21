@@ -17,6 +17,11 @@ namespace ToDoApp.BAL.Implementations
         public async Task<GetUserDto> CreateUser(CreateUserDto createUserDto)
         {
 
+            if (await _user.PhoneExists(createUserDto.Phone))
+            {
+                throw new InvalidOperationException("Phone number already exists.");
+            }
+
             var user = new User
             {
                 Name = createUserDto.UserName,
