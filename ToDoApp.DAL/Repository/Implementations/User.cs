@@ -39,5 +39,10 @@ namespace ToDoApp.DAL.Repository.Implementations
 
             }
         }
+
+        public async Task<Entities.User?> GetUserByPhone(string Phone)
+        {
+            return await _Context.Users.Where(t => t.Phone == Phone).FirstOrDefaultAsync();
+        }
     }
 }

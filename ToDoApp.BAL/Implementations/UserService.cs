@@ -1,7 +1,9 @@
 ﻿using ToDoApp.BAL.Interfaces;
+using ToDoApp.BAL.Jwt;
 using ToDoApp.DAL.Entities;
 using ToDoApp.DAL.Enums;
 using ToDoApp.DAL.Repository.Interface;
+using ToDoApp.Dtos.AuthDto;
 using ToDoApp.Dtos.UserDtos;
 
 namespace ToDoApp.BAL.Implementations
@@ -9,10 +11,12 @@ namespace ToDoApp.BAL.Implementations
     public class UserService : IUserService
     {
         private readonly IUser _user;
+        private readonly IJwtService _Jwt;
 
-        public UserService(IUser user)
+        public UserService(IUser user, IJwtService jwtService)
         {
             _user = user;
+            _Jwt = jwtService;
         }
         public async Task<GetUserDto> CreateUser(CreateUserDto createUserDto)
         {
@@ -48,6 +52,37 @@ namespace ToDoApp.BAL.Implementations
                 
             };
 
+        }
+
+        public async Task<LoginResponseDto> LogIn(LogInDto logInDto)
+        {
+
+
+            var user = await _user.GetUserByPhone(logInDto.Phone);
+
+            if (user == null)
+                throw new InvalidOperationException("Phone not found");
+
+            if (!BCrypt.Net.BCrypt.Verify(logInDto.Password, user.Password))
+                throw new UnauthorizedAccessException("Invalid password");
+
+
+            var result = new LoginResponseDto
+            {
+                Id = user.Id,
+                Username = user.Name,
+                Phone = user.Phone,
+                RoleName = Enum.GetName(typeof(enUserRole),user.RoleId),
+                TeamId= user.TeamId,
+
+            };
+
+
+
+
+            return result;
+              
+            
         }
     }
 }

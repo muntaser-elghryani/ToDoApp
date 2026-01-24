@@ -9,5 +9,6 @@ namespace ToDoApp.DAL.Repository.Interface
     {
         Task<User> CreateUser(User user); 
         Task<bool> PhoneExists(string phone);
+        Task<Entities.User?> GetUserByPhone(string Phone);
     }
 }

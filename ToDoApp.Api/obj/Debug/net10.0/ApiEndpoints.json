@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "ToDoApp.Api.Controllers.AuthController",
+    "Method": "LogIn",
+    "RelativePath": "api/Auth",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "logInDto",
+        "Type": "ToDoApp.Dtos.AuthDto.LogInDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ToDoApp.Dtos.AuthDto.LoginResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "ToDoApp.Api.Controllers.TeamController",
     "Method": "CreateTeam",
     "RelativePath": "api/Team",
