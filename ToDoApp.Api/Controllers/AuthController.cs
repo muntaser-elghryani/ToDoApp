@@ -21,10 +21,9 @@ namespace ToDoApp.Api.Controllers
 
 
         [HttpPost]
-        public async Task<ActionResult<LoginResponseDto>> LogIn(LogInDto logInDto)
+        public async Task<IActionResult> LogIn(LogInDto logInDto)
         {
-            try
-            {
+          
                 var result = await _User.LogIn(logInDto);
 
                 var token = _JWt.GenerateToken(result);
@@ -33,27 +32,30 @@ namespace ToDoApp.Api.Controllers
                 {
                     HttpOnly = true,
                     Secure = true,
-                    SameSite = SameSiteMode.Strict,
+                    SameSite = SameSiteMode.None,
+                    Path = "/",
+                    Domain = "localhost",
                     Expires = DateTimeOffset.UtcNow.AddDays(1)
                 });
 
                 return Ok(result);
-
-            }
-            catch (InvalidOperationException ex)
-            {
-                return NotFound(ex.Message); 
-            }
-            catch(UnauthorizedAccessException ex)
-            {
-                return Unauthorized(ex.Message);
-            }
-            catch (Exception)
-            {
-                return StatusCode(500, "Internal server error");
-            }
            
         }
-      
+
+        [HttpPost("logout")]
+        public IActionResult Logout()
+        {
+            Response.Cookies.Delete("token", new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.None,
+                Path = "/",
+                Domain = "localhost",
+            });
+
+            return Ok();
+        }
+
     }
 }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using ToDoApp.DAL.Enums;
 using ToDoApp.DAL.Repository.Interfaces;
 
 namespace ToDoApp.DAL.Repository.Implementations
@@ -14,6 +15,15 @@ namespace ToDoApp.DAL.Repository.Implementations
         {
             _Context = appDbContext;
         }
+
+        public async Task<bool> AddManager(Entities.Team team,int ManagerId)
+        {
+            var AddManager = team;
+            AddManager.ManagerId = ManagerId;
+            await _Context.SaveChangesAsync();
+            return true;
+        }
+
         public async Task<Entities.Team> CreateTeam(Entities.Team team)
         {
             try
@@ -35,9 +45,20 @@ namespace ToDoApp.DAL.Repository.Implementations
             return await _Context.Teams.ToListAsync();
         }
 
+        public async Task<Entities.Team?> GetTeamById(int id)
+        {
+            return await _Context.Teams.FirstOrDefaultAsync(t => t.Id == id);
+        }
+
         public async Task<bool> NameExists(string name)
         {
             return await _Context.Teams.AnyAsync(t => t.Name == name);
+        }
+
+        public async Task<bool> TeamHasManager(int id)
+        {
+            return await _Context.Teams.AnyAsync(t => t.Id == id && t.ManagerId != null);
+
         }
     }
 }

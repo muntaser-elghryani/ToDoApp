@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Reflection;
 using System.Text;
+using ToDoApp.Api.Middlewares;
 using ToDoApp.BAL.Implementations;
 using ToDoApp.BAL.Interfaces;
 using ToDoApp.BAL.Jwt;
@@ -78,7 +79,7 @@ namespace ToDoApp.Api
             builder.Services.AddScoped<ITeamService, TeamService>();
             builder.Services.AddScoped<IJwtService , JwtService>();
 
-
+            
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddEndpointsApiExplorer();
@@ -95,6 +96,10 @@ namespace ToDoApp.Api
                 app.UseSwaggerUI();
             }
 
+            app.UseMiddleware<ExceptionMiddleware>();
+
+
+            app.UseStaticFiles();
             app.UseHttpsRedirection();
 
             app.UseCors("MyCors");

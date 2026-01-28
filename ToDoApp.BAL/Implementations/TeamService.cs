@@ -48,6 +48,11 @@ namespace ToDoApp.BAL.Implementations
         {
             var teams = await _Team.GetAllTeams();
 
+            if(teams.Count == 0)
+            {
+                throw new Exception("Not Fount Teams");
+            }
+
 
             var Result = teams.Select(t => new GetTeamDto
             {

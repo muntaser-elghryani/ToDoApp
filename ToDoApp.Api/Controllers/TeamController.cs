@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using ToDoApp.BAL.Interfaces;
 using ToDoApp.Dtos.TeamDtos;
 
@@ -16,23 +18,22 @@ namespace ToDoApp.Api.Controllers
             _TeamService = teamService;
         }
 
+        [Authorize(Roles = "SuperAdmin")]
         [HttpPost]
         public async Task<ActionResult<GetTeamDto>> CreateTeam([FromBody] CreateTeamDto createTeamDto)
         {
-            try
-            {
+
+            
+                
                 if (string.IsNullOrEmpty(createTeamDto.Name)) 
                 {
                     return BadRequest("Team Name Is Required");
                 }
-                return Ok(await _TeamService.CreateTeam(createTeamDto));
-            }
-            catch
-            {
-                return BadRequest("Team Name already exists.");
-            }
+                    return Ok(await _TeamService.CreateTeam(createTeamDto));
+          
         }
 
+        [Authorize(Roles = "SuperAdmin")]
         [HttpGet]
         public async Task<ActionResult<List<GetTeamDto>>> GetAllTeam()
         {

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using ToDoApp.DAL.Dtos;
 using ToDoApp.DAL.Entities;
+using ToDoApp.DAL.Enums;
 using ToDoApp.DAL.Repository.Interface;
 
 namespace ToDoApp.DAL.Repository.Implementations
@@ -43,6 +44,23 @@ namespace ToDoApp.DAL.Repository.Implementations
         public async Task<Entities.User?> GetUserByPhone(string Phone)
         {
             return await _Context.Users.Where(t => t.Phone == Phone).FirstOrDefaultAsync();
+        }
+
+        public async Task<bool> GetUserById(int Id)
+        {
+            return await _Context.Users.AnyAsync(u =>u.Id == Id);
+        }
+
+        public async Task<int> DeleteUser(int Id)
+        {
+            return await _Context.Users.Where(u  => u.Id == Id && u.RoleId != (int)enUserRole.SuperAdmin).ExecuteDeleteAsync();
+        }
+
+        public IQueryable<Entities.User> GetAllUsers()
+        {
+                
+
+            return _Context.Users.AsNoTracking(); ;
         }
     }
 }
