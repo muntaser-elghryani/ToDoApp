@@ -10,5 +10,6 @@ namespace ToDoApp.BAL.Interfaces
        
         Task<GetTeamDto> CreateTeam(CreateTeamDto createTeamDto);
         Task<List<GetTeamDto>> GetAllTeams();
+        Task<GetTeamDto> GetTeamByName(string Name);
     }
 }

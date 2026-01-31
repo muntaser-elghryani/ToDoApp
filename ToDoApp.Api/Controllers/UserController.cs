@@ -19,21 +19,30 @@ namespace ToDoApp.Api.Controllers
         }
 
 
-        [Authorize(Roles = "SuperAdmin,Manager")]
-        [HttpPost]
-       public async Task<ActionResult> CreatUser(CreateUserDto creatUserDto)
+        [Authorize(Roles = "Manager")]
+        [HttpPost("CreatEmployee")]
+        public async Task<ActionResult> CreateEmployee(CreateUserDto creatUserDto)
         {
-            var Role = User.FindFirst(ClaimTypes.Role).Value;
+            if (!int.TryParse(User.FindFirstValue("TeamId"), out int TeamId))
+            {
+                return Forbid();
+            }
 
-            int TeamId = Convert.ToInt32(User.FindFirst("TeamId").Value);
-
-            return Ok(await _userService.CreateUser(creatUserDto,Role.ToString(), TeamId));
+            return Ok(await _userService.CreateEmpolyee(creatUserDto, TeamId));
         }
 
-        
+        [Authorize(Roles = "SuperAdmin")]
+        [HttpPost("CreatManager")]
+        public async Task<ActionResult> CreateManager(CreateUserDto creatUserDto)
+        {
+            return Ok(await _userService.CreateManager(creatUserDto));
+           
+        }
+
+
         [Authorize(Roles = "SuperAdmin")]
         [HttpDelete("{Id}")]
-        public async Task<ActionResult> DeleteUser(int Id) 
+        public async Task<ActionResult> DeleteUser(int Id)
         {
             await _userService.DeleteUser(Id);
             return Ok();
@@ -42,21 +51,41 @@ namespace ToDoApp.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllUsers()
         {
-            
-                return Ok(await _userService.GetAllUsers());
+
+            return Ok(await _userService.GetAllUsers());
 
         }
 
 
         [HttpGet("phone")]
-        public async Task<IActionResult> GetUserByPhone([FromQuery]string Phone) 
+        public async Task<IActionResult> GetUserByPhone([FromQuery] string Phone)
         {
-                
-                return Ok(await _userService.GetUserByPhone(Phone));
-            
+
+            return Ok(await _userService.GetUserByPhone(Phone));
+
         }
 
-    
 
+        [Authorize(Roles = "SuperAdmin")]
+        [HttpGet("Managers")]
+        public async Task<IActionResult> GetAllManagers()
+        {
+            return Ok(await _userService.GetAllManagers());
+
+        }
+
+
+        [Authorize(Roles = "Manager")]
+        [HttpGet("Employee")]
+        public async Task<IActionResult> GetAllEmployeeTeamScoped()
+        {
+
+
+            if (!int.TryParse(User.FindFirstValue("TeamId"), out int TeamId))
+                return Forbid();
+                
+
+            return Ok(await _userService.GetAllEmployeeTeamScoped(TeamId));
+        }
     }
 }

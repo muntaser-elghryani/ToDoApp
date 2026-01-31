@@ -13,3 +13,6 @@ E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\ToDoApp.DAL.pdb
 E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\ToDoApp.DAL.genruntimeconfig.cache
 E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\ref\ToDoApp.DAL.dll
 E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\ToDoApp.DAL.sourcelink.json
+E:\back-end\ToDoApp\ToDoApp.DAL\bin\Debug\net10.0\ToDoApp.Dtos.dll
+E:\back-end\ToDoApp\ToDoApp.DAL\bin\Debug\net10.0\ToDoApp.Dtos.pdb
+E:\back-end\ToDoApp\ToDoApp.DAL\obj\Debug\net10.0\ToDoApp..D1AD3D18.Up2Date

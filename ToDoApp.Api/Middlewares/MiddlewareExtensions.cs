@@ -13,7 +13,7 @@ namespace ToDoApp.Api.Middlewares
     }
 
         public async Task Invoke(HttpContext context)
-        {
+       {
             try
             {
                 await _next(context);

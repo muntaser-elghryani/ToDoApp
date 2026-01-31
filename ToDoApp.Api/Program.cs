@@ -10,9 +10,13 @@ using ToDoApp.BAL.Implementations;
 using ToDoApp.BAL.Interfaces;
 using ToDoApp.BAL.Jwt;
 using ToDoApp.DAL;
+using ToDoApp.DAL.Entities;
 using ToDoApp.DAL.Repository.Implementations;
 using ToDoApp.DAL.Repository.Interface;
 using ToDoApp.DAL.Repository.Interfaces;
+using TaskItem = ToDoApp.DAL.Repository.Implementations.TaskItem;
+using Team = ToDoApp.DAL.Repository.Implementations.Team;
+using User = ToDoApp.DAL.Repository.Implementations.User;
 
 namespace ToDoApp.Api
 {
@@ -73,10 +77,13 @@ namespace ToDoApp.Api
             //DI services DAL
             builder.Services.AddScoped<IUser, User>();
             builder.Services.AddScoped<ITeam, Team>();
+            builder.Services.AddScoped<ITaskItem, TaskItem>();
+            
 
             //DI services BAL
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<ITeamService, TeamService>();
+            builder.Services.AddScoped<ITaskItemService, TaskItemService>();
             builder.Services.AddScoped<IJwtService , JwtService>();
 
             

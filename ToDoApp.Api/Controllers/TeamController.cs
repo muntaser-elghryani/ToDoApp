@@ -40,5 +40,15 @@ namespace ToDoApp.Api.Controllers
             var Result = await _TeamService.GetAllTeams();
             return Ok(Result);
         }
+
+        [HttpGet("GetNameByName")]
+        public async Task<IActionResult> GetTeamByName(string name) 
+        {
+            return Ok(await _TeamService.GetTeamByName(name));
+        }
+
+        
+
+
     }
 }

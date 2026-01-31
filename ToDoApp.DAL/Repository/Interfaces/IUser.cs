@@ -1,6 +1,5 @@
 ﻿
 
-using ToDoApp.DAL.Dtos;
 using ToDoApp.DAL.Entities;
 
 namespace ToDoApp.DAL.Repository.Interface
@@ -9,10 +8,13 @@ namespace ToDoApp.DAL.Repository.Interface
     {
         Task<User> CreateUser(User user); 
         Task<bool> PhoneExists(string phone);
+        Task<bool> EmployeeExists(int EmployeeId);
+        Task<User?> GetEmployeeById(int EmployeeId);
         Task<Entities.User?> GetUserByPhone(string Phone);
-        Task<bool> GetUserById(int Id);
         Task<int> DeleteUser(int Id);
         IQueryable<User> GetAllUsers();
+        Task<List<User>> GetAllManager();
+        Task<List<User>> GetAllEmployeeTeamScoped(int TeamId);
 
     }
 }

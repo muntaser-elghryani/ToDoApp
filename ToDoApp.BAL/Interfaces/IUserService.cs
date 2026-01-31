@@ -8,11 +8,14 @@ namespace ToDoApp.BAL.Interfaces
 {
     public interface IUserService
     {
-        public Task<GetUserDto> CreateUser(CreateUserDto createUserDto, string Role,int TeamId);
+        public Task<GetUserDto> CreateEmpolyee(CreateUserDto createUserDto,int TeamId);
+        public Task<GetUserDto> CreateManager(CreateUserDto createUserDto);
+
         public Task<LoginResponseDto> LogIn(LogInDto logInDto);
         Task<bool> DeleteUser(int  Id);
         Task<GetUserDto> GetUserByPhone(string Phone);
-
+        Task<List<GetUserDto>> GetAllManagers();
+        Task<List<GetUserDto>> GetAllEmployeeTeamScoped(int TeamId);
         Task<List<GetUserDto>> GetAllUsers();
     }
 }

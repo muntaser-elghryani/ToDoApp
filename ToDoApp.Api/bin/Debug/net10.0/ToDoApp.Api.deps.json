@@ -868,7 +868,8 @@
       "ToDoApp.DAL/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "10.0.2",
-          "Microsoft.EntityFrameworkCore.SqlServer": "10.0.2"
+          "Microsoft.EntityFrameworkCore.SqlServer": "10.0.2",
+          "ToDoApp.Dtos": "1.0.0"
         },
         "runtime": {
           "ToDoApp.DAL.dll": {

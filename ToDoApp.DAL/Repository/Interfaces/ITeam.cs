@@ -14,5 +14,6 @@ namespace ToDoApp.DAL.Repository.Interfaces
         Task<Team?> GetTeamById(int id);
         Task<bool> AddManager(Team team, int ManagerId);
 
+        Task<Team?> GetTeamByName(string name);
     }
 }

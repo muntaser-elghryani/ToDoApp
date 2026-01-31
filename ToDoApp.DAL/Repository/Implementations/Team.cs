@@ -60,5 +60,12 @@ namespace ToDoApp.DAL.Repository.Implementations
             return await _Context.Teams.AnyAsync(t => t.Id == id && t.ManagerId != null);
 
         }
+
+
+        public async Task<Entities.Team?> GetTeamByName(string name)
+        {
+            return await _Context.Teams.Where(t => t.Name == name).FirstOrDefaultAsync();
+        }
+
     }
 }

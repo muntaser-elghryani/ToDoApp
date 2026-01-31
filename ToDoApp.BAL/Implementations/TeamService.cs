@@ -66,5 +66,21 @@ namespace ToDoApp.BAL.Implementations
             return Result;
             
         }
+
+        public async Task<GetTeamDto> GetTeamByName(string Name)
+        {
+            var Team =await _Team.GetTeamByName(Name);
+            if (Team == null)
+                throw new Exception("no Team");
+
+            return new GetTeamDto
+            {
+                Id = Team.Id,
+                Name = Team.Name,
+                ManagerId = Team.ManagerId,
+                CreatedAt = Team.CreatedAt.ToString("yyyy-mm-dd hh:mm"),
+                UpdatedAt = Team.UpdatedAt.ToString("yyyy-mm-dd hh:mm")
+            };
+        }
     }
 }

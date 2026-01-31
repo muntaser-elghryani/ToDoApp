@@ -24,81 +24,87 @@ namespace ToDoApp.BAL.Implementations
             _Jwt = jwtService;
             _team = team;
         }
-        public async Task<GetUserDto> CreateUser(CreateUserDto createUserDto, string Role, int TeamId)
+
+        public async Task<GetUserDto> CreateEmpolyee(CreateUserDto createUserDto, int TeamId)
         {
 
             if (await _user.PhoneExists(createUserDto.Phone))
                 throw new InvalidOperationException("Phone number already exists.");
 
-            if (Role == enUserRole.Manager.ToString())
+
+            var Employee = new User
             {
-                var Employee = new User
-                {
-                    Name = createUserDto.UserName,
-                    Phone = createUserDto.Phone,
-                    Password = BCrypt.Net.BCrypt.HashPassword(createUserDto.Password),
-                    RoleId = (int)enUserRole.Employee,
-                    TeamId = TeamId,
-                    Status = enUserStatus.Active,
-                    CreatedAt = DateTime.UtcNow,
-                    UpdatedAt = DateTime.UtcNow,
-                };
+                Name = createUserDto.UserName,
+                Phone = createUserDto.Phone,
+                Password = BCrypt.Net.BCrypt.HashPassword(createUserDto.Password),
+                RoleId = (int)enUserRole.Employee,
+                TeamId = TeamId,
+                Status = enUserStatus.Active,
+                CreatedAt = DateTime.UtcNow,
+                UpdatedAt = DateTime.UtcNow,
+            };
 
-                var NewEmployee = await _user.CreateUser(Employee);
+            var NewEmployee = await _user.CreateUser(Employee);
 
-                return new GetUserDto
-                {
-                    Id = NewEmployee.Id,
-                    Name = NewEmployee.Name,
-                    phone = NewEmployee.Phone,
-                    RoleName = Enum.GetName(typeof(enUserRole), NewEmployee.RoleId),
-                    TeamId = NewEmployee.TeamId,
-                    Status = NewEmployee.Status.ToString(),
-                };
-            }
-            else if (Role == enUserRole.SuperAdmin.ToString())
+            return new GetUserDto
             {
-                var Team = await _team.GetTeamById((int)createUserDto.TeamId);
-                if (Team.ManagerId != null)
-                {
-                    throw new InvalidOperationException("this team already  manager  exists");
-                }
+                Id = NewEmployee.Id,
+                Name = NewEmployee.Name,
+                phone = NewEmployee.Phone,
+                RoleName = Enum.GetName(typeof(enUserRole), NewEmployee.RoleId),
+                TeamId = NewEmployee.TeamId,
+                Status = NewEmployee.Status.ToString(),
+            };
 
 
-                var Manager = new User
-                {
-                    Name = createUserDto.UserName,
-                    Phone = createUserDto.Phone,
-                    Password = BCrypt.Net.BCrypt.HashPassword(createUserDto.Password),
-                    RoleId = (int)enUserRole.Manager,
-                    TeamId = createUserDto.TeamId,
-                    Status = enUserStatus.Active,
-                    CreatedAt = DateTime.UtcNow,
-                    UpdatedAt = DateTime.UtcNow,
-                };
-                var newManager = await _user.CreateUser(Manager);
-
-                await _team.AddManager(Team, newManager.Id);
-
-                return new GetUserDto
-                {
-                    Id = newManager.Id,
-                    Name = newManager.Name,
-                    phone = newManager.Phone,
-                    RoleName = Enum.GetName(typeof(enUserRole), newManager.RoleId),
-                    TeamId = newManager.TeamId,
-                    Status = newManager.Status.ToString(),
-                };
-            }
-            else
-            {
-                throw new UnauthorizedAccessException();
-            }
 
         }
 
+        public async Task<GetUserDto> CreateManager(CreateUserDto createUserDto)
+        {
 
 
+            if (await _user.PhoneExists(createUserDto.Phone))
+                throw new InvalidOperationException("Phone number already exists.");
+
+            
+
+            var Taem = await _team.GetTeamById(createUserDto.TeamId.Value);
+
+            if (Taem == null && Taem.ManagerId == null)
+            {
+                throw new Exception("this team manager thir is");
+            }
+
+            var Manager = new User
+            {
+                Name = createUserDto.UserName,
+                Phone = createUserDto.Phone,
+                Password = BCrypt.Net.BCrypt.HashPassword(createUserDto.Password),
+                RoleId = (int)enUserRole.Manager,
+                TeamId = createUserDto.TeamId,
+                Status = enUserStatus.Active,
+                CreatedAt = DateTime.UtcNow,
+                UpdatedAt = DateTime.UtcNow,
+            };
+            var NewManager = await _user.CreateUser(Manager);
+
+            if(await _team.AddManager(Taem, NewManager.Id))
+            {
+                return new GetUserDto
+                {
+                    Id = NewManager.Id,
+                    Name = NewManager.Name,
+                    phone = NewManager.Phone,
+                    RoleName = Enum.GetName(typeof(enUserRole), NewManager.RoleId),
+                    TeamId = NewManager.TeamId,
+                    Status = NewManager.Status.ToString(),
+                };
+            }
+            return new GetUserDto();
+
+
+        }
 
         public async Task<bool> DeleteUser(int Id)
         {
@@ -108,6 +114,42 @@ namespace ToDoApp.BAL.Implementations
                 throw new KeyNotFoundException("This User Not Found Or Admin");
 
             return true;
+        }
+
+        public async Task<List<GetUserDto>> GetAllEmployeeTeamScoped(int TeamId)
+        {
+            var Employee = await _user.GetAllEmployeeTeamScoped(TeamId);
+            if (Employee == null)
+                throw new KeyNotFoundException("no Employee");
+
+            return Employee.Select(e => new GetUserDto 
+            {
+                Id = e.Id,
+                Name = e.Name,
+                phone = e.Phone,
+                RoleName = Enum.GetName(typeof (enUserRole), e.RoleId),
+                TeamId = e.TeamId,
+                Status = e.Status.ToString(),
+            }).ToList();
+        }
+
+        public async Task<List<GetUserDto>> GetAllManagers()
+        {
+           var Managers = await _user.GetAllManager();
+            if (Managers == null)
+            {
+                throw new KeyNotFoundException("No Managers");
+            }
+            return Managers.Select(m => new GetUserDto
+            {
+                Id = m.Id,
+                Name = m.Name,
+                phone = m.Phone,
+                RoleName = Enum.GetName(typeof (enUserRole), m.RoleId),
+                TeamId = m.TeamId,
+                Status= m.Status.ToString(),
+
+            }).ToList();
         }
 
         public async Task<List<GetUserDto>> GetAllUsers()
