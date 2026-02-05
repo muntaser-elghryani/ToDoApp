@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "E:\\back-end\\ToDoApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8EC72751-A1FD-B5A5-25B7-DF7492F37F58}|ToDoApp.Api\\ToDoApp.Api.csproj|e:\\back-end\\todoapp\\todoapp.api\\controllers\\taskitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EC72751-A1FD-B5A5-25B7-DF7492F37F58}|ToDoApp.Api\\ToDoApp.Api.csproj|solutionrelative:todoapp.api\\controllers\\taskitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A34ECBDB-3C50-ED49-7BD9-59D6B66C70DC}|ToDoApp.DAL\\ToDoApp.DAL.csproj|e:\\back-end\\todoapp\\todoapp.dal\\dataseed\\dataseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A34ECBDB-3C50-ED49-7BD9-59D6B66C70DC}|ToDoApp.DAL\\ToDoApp.DAL.csproj|solutionrelative:todoapp.dal\\dataseed\\dataseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC72751-A1FD-B5A5-25B7-DF7492F37F58}|ToDoApp.Api\\ToDoApp.Api.csproj|e:\\back-end\\todoapp\\todoapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC72751-A1FD-B5A5-25B7-DF7492F37F58}|ToDoApp.Api\\ToDoApp.Api.csproj|solutionrelative:todoapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A34ECBDB-3C50-ED49-7BD9-59D6B66C70DC}|ToDoApp.DAL\\ToDoApp.DAL.csproj|e:\\back-end\\todoapp\\todoapp.dal\\configuration\\userconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A34ECBDB-3C50-ED49-7BD9-59D6B66C70DC}|ToDoApp.DAL\\ToDoApp.DAL.csproj|solutionrelative:todoapp.dal\\configuration\\userconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 249,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,15 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TaskItemController.cs",
-              "DocumentMoniker": "E:\\back-end\\ToDoApp\\ToDoApp.Api\\Controllers\\TaskItemController.cs",
-              "RelativeDocumentMoniker": "ToDoApp.Api\\Controllers\\TaskItemController.cs",
-              "ToolTip": "E:\\back-end\\ToDoApp\\ToDoApp.Api\\Controllers\\TaskItemController.cs",
-              "RelativeToolTip": "ToDoApp.Api\\Controllers\\TaskItemController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAowEUAAAAUAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\back-end\\ToDoApp\\ToDoApp.Api\\Program.cs",
+              "RelativeDocumentMoniker": "ToDoApp.Api\\Program.cs",
+              "ToolTip": "E:\\back-end\\ToDoApp\\ToDoApp.Api\\Program.cs",
+              "RelativeToolTip": "ToDoApp.Api\\Program.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwC0AAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-31T17:55:30.245Z",
+              "WhenOpened": "2026-02-05T12:13:04.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataSeed.cs",
+              "DocumentMoniker": "E:\\back-end\\ToDoApp\\ToDoApp.DAL\\DataSeed\\DataSeed.cs",
+              "RelativeDocumentMoniker": "ToDoApp.DAL\\DataSeed\\DataSeed.cs",
+              "ToolTip": "E:\\back-end\\ToDoApp\\ToDoApp.DAL\\DataSeed\\DataSeed.cs",
+              "RelativeToolTip": "ToDoApp.DAL\\DataSeed\\DataSeed.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T12:04:57.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserConfig.cs",
+              "DocumentMoniker": "E:\\back-end\\ToDoApp\\ToDoApp.DAL\\Configuration\\UserConfig.cs",
+              "RelativeDocumentMoniker": "ToDoApp.DAL\\Configuration\\UserConfig.cs",
+              "ToolTip": "E:\\back-end\\ToDoApp\\ToDoApp.DAL\\Configuration\\UserConfig.cs",
+              "RelativeToolTip": "ToDoApp.DAL\\Configuration\\UserConfig.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAQwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T11:40:07.828Z",
               "EditorCaption": ""
             }
           ]

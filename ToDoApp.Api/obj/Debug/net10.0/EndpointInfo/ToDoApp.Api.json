@@ -112,7 +112,7 @@
         }
       }
     },
-    "/api/TaskItem/TasksByEmployee": {
+    "/api/TaskItem/me": {
       "get": {
         "tags": [
           "TaskItem"

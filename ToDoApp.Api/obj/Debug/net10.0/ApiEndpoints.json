@@ -70,7 +70,7 @@
   {
     "ContainingType": "ToDoApp.Api.Controllers.TaskItemController",
     "Method": "GetTasksByEmployeeId",
-    "RelativePath": "api/TaskItem/TasksByEmployee",
+    "RelativePath": "api/TaskItem/me",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

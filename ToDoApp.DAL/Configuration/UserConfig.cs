@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using ToDoApp.DAL.Entities;
+using ToDoApp.Dtos.UserDtos;
 
 namespace ToDoApp.DAL.Configuration
 {
@@ -52,8 +53,6 @@ namespace ToDoApp.DAL.Configuration
                 .WithMany(u => u.Users)
                 .HasForeignKey(u => u.TeamId)
                 .OnDelete(DeleteBehavior.SetNull);
-
-
 
 
         }

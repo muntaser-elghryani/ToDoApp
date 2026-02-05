@@ -10,6 +10,7 @@ using ToDoApp.BAL.Implementations;
 using ToDoApp.BAL.Interfaces;
 using ToDoApp.BAL.Jwt;
 using ToDoApp.DAL;
+using ToDoApp.DAL.DataSeed;
 using ToDoApp.DAL.Entities;
 using ToDoApp.DAL.Repository.Implementations;
 using ToDoApp.DAL.Repository.Interface;
@@ -18,12 +19,7 @@ using TaskItem = ToDoApp.DAL.Repository.Implementations.TaskItem;
 using Team = ToDoApp.DAL.Repository.Implementations.Team;
 using User = ToDoApp.DAL.Repository.Implementations.User;
 
-namespace ToDoApp.Api
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
@@ -31,7 +27,6 @@ namespace ToDoApp.Api
             {
                 option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
-
 
             builder.Services.AddFluentValidationAutoValidation();
             builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
@@ -95,6 +90,9 @@ namespace ToDoApp.Api
 
 
             var app = builder.Build();
+            await DataSeed.SeedSuperAdmin(app.Services);
+
+
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -118,6 +116,3 @@ namespace ToDoApp.Api
             app.MapControllers();
 
             app.Run();
-        }
-    }
-}

@@ -48,6 +48,8 @@ namespace ToDoApp.Api.Controllers
             return Ok();
         }
 
+
+        //[Authorize(Roles = "SuperAdmin")]
         [HttpGet]
         public async Task<IActionResult> GetAllUsers()
         {
@@ -56,7 +58,7 @@ namespace ToDoApp.Api.Controllers
 
         }
 
-
+        [Authorize(Roles = "SuperAdmin,Manager")]
         [HttpGet("phone")]
         public async Task<IActionResult> GetUserByPhone([FromQuery] string Phone)
         {
