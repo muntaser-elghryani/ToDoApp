@@ -19,18 +19,7 @@ namespace ToDoApp.Api.Controllers
         }
 
 
-        [Authorize(Roles = "Manager")]
-        [HttpPost("CreatEmployee")]
-        public async Task<ActionResult> CreateEmployee(CreateUserDto creatUserDto)
-        {
-            if (!int.TryParse(User.FindFirstValue("TeamId"), out int TeamId))
-            {
-                return Forbid();
-            }
-
-            return Ok(await _userService.CreateEmpolyee(creatUserDto, TeamId));
-        }
-
+  
         [Authorize(Roles = "SuperAdmin")]
         [HttpPost("CreatManager")]
         public async Task<ActionResult> CreateManager(CreateUserDto creatUserDto)
@@ -49,7 +38,7 @@ namespace ToDoApp.Api.Controllers
         }
 
 
-        //[Authorize(Roles = "SuperAdmin")]
+        [Authorize(Roles = "SuperAdmin")]
         [HttpGet]
         public async Task<IActionResult> GetAllUsers()
         {
@@ -58,7 +47,7 @@ namespace ToDoApp.Api.Controllers
 
         }
 
-        [Authorize(Roles = "SuperAdmin,Manager")]
+        [Authorize(Roles = "SuperAdmin")]
         [HttpGet("phone")]
         public async Task<IActionResult> GetUserByPhone([FromQuery] string Phone)
         {
@@ -77,6 +66,9 @@ namespace ToDoApp.Api.Controllers
         }
 
 
+
+        //manager 
+
         [Authorize(Roles = "Manager")]
         [HttpGet("Employee")]
         public async Task<IActionResult> GetAllEmployeeTeamScoped()
@@ -85,9 +77,23 @@ namespace ToDoApp.Api.Controllers
 
             if (!int.TryParse(User.FindFirstValue("TeamId"), out int TeamId))
                 return Forbid();
-                
+
 
             return Ok(await _userService.GetAllEmployeeTeamScoped(TeamId));
         }
+
+        [Authorize(Roles = "Manager")]
+        [HttpPost("CreatEmployee")]
+        public async Task<ActionResult> CreateEmployee(CreateUserDto creatUserDto)
+        {
+            if (!int.TryParse(User.FindFirstValue("TeamId"), out int TeamId))
+            {
+                return Forbid();
+            }
+
+            return Ok(await _userService.CreateEmpolyee(creatUserDto, TeamId));
+        }
+
+
     }
 }

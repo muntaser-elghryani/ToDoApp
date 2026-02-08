@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "E:\\back-end\\ToDoApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8EC72751-A1FD-B5A5-25B7-DF7492F37F58}|ToDoApp.Api\\ToDoApp.Api.csproj|e:\\back-end\\todoapp\\todoapp.api\\middlewares\\middlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC72751-A1FD-B5A5-25B7-DF7492F37F58}|ToDoApp.Api\\ToDoApp.Api.csproj|solutionrelative:todoapp.api\\middlewares\\middlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{480E5EA0-50FE-5ADB-CC07-95E7BA9DFC2B}|ToDoApp.BAL\\ToDoApp.BAL.csproj|e:\\back-end\\todoapp\\todoapp.bal\\implementations\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{480E5EA0-50FE-5ADB-CC07-95E7BA9DFC2B}|ToDoApp.BAL\\ToDoApp.BAL.csproj|solutionrelative:todoapp.bal\\implementations\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{480E5EA0-50FE-5ADB-CC07-95E7BA9DFC2B}|ToDoApp.BAL\\ToDoApp.BAL.csproj|e:\\back-end\\todoapp\\todoapp.bal\\exceptions\\teamalreadyhasmanagerexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{480E5EA0-50FE-5ADB-CC07-95E7BA9DFC2B}|ToDoApp.BAL\\ToDoApp.BAL.csproj|solutionrelative:todoapp.bal\\exceptions\\teamalreadyhasmanagerexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC72751-A1FD-B5A5-25B7-DF7492F37F58}|ToDoApp.Api\\ToDoApp.Api.csproj|e:\\back-end\\todoapp\\todoapp.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC72751-A1FD-B5A5-25B7-DF7492F37F58}|ToDoApp.Api\\ToDoApp.Api.csproj|solutionrelative:todoapp.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A34ECBDB-3C50-ED49-7BD9-59D6B66C70DC}|ToDoApp.DAL\\ToDoApp.DAL.csproj|e:\\back-end\\todoapp\\todoapp.dal\\dataseed\\dataseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A34ECBDB-3C50-ED49-7BD9-59D6B66C70DC}|ToDoApp.DAL\\ToDoApp.DAL.csproj|solutionrelative:todoapp.dal\\dataseed\\dataseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 249,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,7 +46,59 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MiddlewareExtensions.cs",
+              "DocumentMoniker": "E:\\back-end\\ToDoApp\\ToDoApp.Api\\Middlewares\\MiddlewareExtensions.cs",
+              "RelativeDocumentMoniker": "ToDoApp.Api\\Middlewares\\MiddlewareExtensions.cs",
+              "ToolTip": "E:\\back-end\\ToDoApp\\ToDoApp.Api\\Middlewares\\MiddlewareExtensions.cs",
+              "RelativeToolTip": "ToDoApp.Api\\Middlewares\\MiddlewareExtensions.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T19:05:45.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TeamAlreadyHasManagerException.cs",
+              "DocumentMoniker": "E:\\back-end\\ToDoApp\\ToDoApp.BAL\\Exceptions\\TeamAlreadyHasManagerException.cs",
+              "RelativeDocumentMoniker": "ToDoApp.BAL\\Exceptions\\TeamAlreadyHasManagerException.cs",
+              "ToolTip": "E:\\back-end\\ToDoApp\\ToDoApp.BAL\\Exceptions\\TeamAlreadyHasManagerException.cs",
+              "RelativeToolTip": "ToDoApp.BAL\\Exceptions\\TeamAlreadyHasManagerException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T19:09:24.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "E:\\back-end\\ToDoApp\\ToDoApp.BAL\\Implementations\\UserService.cs",
+              "RelativeDocumentMoniker": "ToDoApp.BAL\\Implementations\\UserService.cs",
+              "ToolTip": "E:\\back-end\\ToDoApp\\ToDoApp.BAL\\Implementations\\UserService.cs",
+              "RelativeToolTip": "ToDoApp.BAL\\Implementations\\UserService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAkwEwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T19:03:12.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "E:\\back-end\\ToDoApp\\ToDoApp.Api\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "ToDoApp.Api\\Controllers\\UserController.cs",
+              "ToolTip": "E:\\back-end\\ToDoApp\\ToDoApp.Api\\Controllers\\UserController.cs",
+              "RelativeToolTip": "ToDoApp.Api\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T12:39:27.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\back-end\\ToDoApp\\ToDoApp.Api\\Program.cs",
               "RelativeDocumentMoniker": "ToDoApp.Api\\Program.cs",
@@ -38,25 +106,23 @@
               "RelativeToolTip": "ToDoApp.Api\\Program.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAQwC0AAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T12:13:04.586Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-05T12:13:04.586Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "DataSeed.cs",
               "DocumentMoniker": "E:\\back-end\\ToDoApp\\ToDoApp.DAL\\DataSeed\\DataSeed.cs",
               "RelativeDocumentMoniker": "ToDoApp.DAL\\DataSeed\\DataSeed.cs",
-              "ToolTip": "E:\\back-end\\ToDoApp\\ToDoApp.DAL\\DataSeed\\DataSeed.cs*",
-              "RelativeToolTip": "ToDoApp.DAL\\DataSeed\\DataSeed.cs*",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ToolTip": "E:\\back-end\\ToDoApp\\ToDoApp.DAL\\DataSeed\\DataSeed.cs",
+              "RelativeToolTip": "ToDoApp.DAL\\DataSeed\\DataSeed.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwB0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T12:04:57.584Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-05T12:04:57.584Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "UserConfig.cs",
               "DocumentMoniker": "E:\\back-end\\ToDoApp\\ToDoApp.DAL\\Configuration\\UserConfig.cs",
               "RelativeDocumentMoniker": "ToDoApp.DAL\\Configuration\\UserConfig.cs",
@@ -64,8 +130,7 @@
               "RelativeToolTip": "ToDoApp.DAL\\Configuration\\UserConfig.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAQwDcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T11:40:07.828Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-05T11:40:07.828Z"
             }
           ]
         }

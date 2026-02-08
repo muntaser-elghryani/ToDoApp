@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ToDoApp.BAL.Exceptions;
 using ToDoApp.BAL.Interfaces;
 using ToDoApp.BAL.Jwt;
 using ToDoApp.DAL.Entities;
@@ -65,15 +66,18 @@ namespace ToDoApp.BAL.Implementations
 
 
             if (await _user.PhoneExists(createUserDto.Phone))
-                throw new InvalidOperationException("Phone number already exists.");
+                throw new PhoneAlreadyExistsException();
+
+            if(createUserDto.TeamId == null)
+                throw new ArgumentNullException("team id is null");
 
             
 
             var Taem = await _team.GetTeamById(createUserDto.TeamId.Value);
 
-            if (Taem == null && Taem.ManagerId == null)
+            if (Taem == null || Taem.ManagerId != null)
             {
-                throw new Exception("this team manager thir is");
+                throw new TeamAlreadyHasManagerException();
             }
 
             var Manager = new User

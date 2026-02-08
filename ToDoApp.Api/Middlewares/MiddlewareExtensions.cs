@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using ToDoApp.BAL.Exceptions;
 
 namespace ToDoApp.Api.Middlewares
 {
@@ -24,6 +25,7 @@ namespace ToDoApp.Api.Middlewares
 
                 context.Response.StatusCode = ex switch
                 {
+                    BusinessException => StatusCodes.Status400BadRequest,
                     KeyNotFoundException => StatusCodes.Status404NotFound,
                     UnauthorizedAccessException => StatusCodes.Status401Unauthorized,
                     InvalidOperationException => StatusCodes.Status400BadRequest,
