@@ -11,6 +11,7 @@ namespace ToDoApp.DAL.Entities
         public string Name { get; set; } = string.Empty;
 
         public int? ManagerId { get; set; }
+        public User? Manager { get; set; }
 
 
         public DateTime CreatedAt { get; set; }

@@ -7,11 +7,11 @@ using ToDoApp.Dtos.TaskDtos;
 
 namespace ToDoApp.DAL.Repository.Implementations
 {
-    public class TaskItem : ITaskItem
+    public class TaskItemRepo : ITaskItem
     {
         private readonly AppDbContext _Context;
 
-        public TaskItem(AppDbContext Context)
+        public TaskItemRepo(AppDbContext Context)
         {
             _Context = Context;
         }

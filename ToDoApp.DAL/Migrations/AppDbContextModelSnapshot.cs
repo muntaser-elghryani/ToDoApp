@@ -131,9 +131,7 @@ namespace ToDoApp.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ManagerId")
-                        .IsUnique()
-                        .HasFilter("[ManagerId] IS NOT NULL");
+                    b.HasIndex("ManagerId");
 
                     b.ToTable("Teams");
                 });
@@ -208,6 +206,16 @@ namespace ToDoApp.DAL.Migrations
                     b.Navigation("AssignedTo");
 
                     b.Navigation("Team");
+                });
+
+            modelBuilder.Entity("ToDoApp.DAL.Entities.Team", b =>
+                {
+                    b.HasOne("ToDoApp.DAL.Entities.User", "Manager")
+                        .WithMany()
+                        .HasForeignKey("ManagerId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("Manager");
                 });
 
             modelBuilder.Entity("ToDoApp.DAL.Entities.User", b =>

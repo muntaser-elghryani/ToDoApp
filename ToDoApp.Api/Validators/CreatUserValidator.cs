@@ -8,7 +8,6 @@ namespace ToDoApp.Api.Validators
     {
         public CreatUserValidator()
         {
-            // 1️⃣ UserName: لا يكون null ولا فارغ
             RuleFor(x => x.UserName)
                 .NotEmpty()
                 .WithMessage("User name is required");
@@ -29,16 +28,9 @@ namespace ToDoApp.Api.Validators
                 .MinimumLength(6)
                 .WithMessage("Password must be at least 6 characters");
 
-            // 4️⃣ RoleId: لا يكون null أو فارغ (رقم أكبر من 0)
-            RuleFor(x => x.RoleId)
-                .GreaterThan(0)
-                 .InclusiveBetween(1, 3)
-                .WithMessage("RoleId must be between 1 and 3");
+          
 
-            // 5️⃣ TeamId: لا يكون null أو فارغ
-            //RuleFor(x => x.TeamId)
-            //    .GreaterThan(0)
-            //    .WithMessage("Team is required");
+         
 
           
         }

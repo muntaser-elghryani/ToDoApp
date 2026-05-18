@@ -7,11 +7,11 @@ using ToDoApp.DAL.Repository.Interfaces;
 
 namespace ToDoApp.DAL.Repository.Implementations
 {
-    public class Team : ITeam
+    public class TeamRepo : ITeam
     {
         private AppDbContext _Context;
 
-        public Team(AppDbContext appDbContext)
+        public TeamRepo(AppDbContext appDbContext)
         {
             _Context = appDbContext;
         }

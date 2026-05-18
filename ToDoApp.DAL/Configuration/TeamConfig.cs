@@ -24,8 +24,8 @@ namespace ToDoApp.DAL.Configuration
 
             builder.Property(t => t.ManagerId)
                 .IsRequired(false);
-            builder.HasIndex(t => t.ManagerId)
-                .IsUnique();
+            //builder.HasIndex(t => t.ManagerId)
+            //    .IsUnique();
 
 
             builder.Property(t => t.CreatedAt)
@@ -36,6 +36,10 @@ namespace ToDoApp.DAL.Configuration
                    .IsRequired();
 
 
+            builder.HasOne(t => t.Manager)
+              .WithMany()
+              .HasForeignKey(t => t.ManagerId)
+               .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

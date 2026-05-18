@@ -8,11 +8,11 @@ using ToDoApp.DAL.Repository.Interface;
 
 namespace ToDoApp.DAL.Repository.Implementations
 {
-    public class User : IUser
+    public class UserRepo : IUser
     {
         private readonly AppDbContext _Context;
 
-        public User(AppDbContext appDbContext)
+        public UserRepo(AppDbContext appDbContext)
         {
             _Context = appDbContext;
         }

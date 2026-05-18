@@ -12,8 +12,8 @@ using ToDoApp.DAL;
 namespace ToDoApp.DAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260121102454_inisgelCreate")]
-    partial class inisgelCreate
+    [Migration("20260218231511_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -134,9 +134,7 @@ namespace ToDoApp.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ManagerId")
-                        .IsUnique()
-                        .HasFilter("[ManagerId] IS NOT NULL");
+                    b.HasIndex("ManagerId");
 
                     b.ToTable("Teams");
                 });
@@ -211,6 +209,16 @@ namespace ToDoApp.DAL.Migrations
                     b.Navigation("AssignedTo");
 
                     b.Navigation("Team");
+                });
+
+            modelBuilder.Entity("ToDoApp.DAL.Entities.Team", b =>
+                {
+                    b.HasOne("ToDoApp.DAL.Entities.User", "Manager")
+                        .WithMany()
+                        .HasForeignKey("ManagerId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("Manager");
                 });
 
             modelBuilder.Entity("ToDoApp.DAL.Entities.User", b =>

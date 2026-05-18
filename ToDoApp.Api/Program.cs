@@ -15,9 +15,9 @@ using ToDoApp.DAL.Entities;
 using ToDoApp.DAL.Repository.Implementations;
 using ToDoApp.DAL.Repository.Interface;
 using ToDoApp.DAL.Repository.Interfaces;
-using TaskItem = ToDoApp.DAL.Repository.Implementations.TaskItem;
-using Team = ToDoApp.DAL.Repository.Implementations.Team;
-using User = ToDoApp.DAL.Repository.Implementations.User;
+using TaskItem = ToDoApp.DAL.Repository.Implementations.TaskItemRepo;
+using Team = ToDoApp.DAL.Repository.Implementations.TeamRepo;
+using User = ToDoApp.DAL.Repository.Implementations.UserRepo;
 
 
             var builder = WebApplication.CreateBuilder(args);
@@ -70,9 +70,7 @@ using User = ToDoApp.DAL.Repository.Implementations.User;
 
 
             //DI services DAL
-            builder.Services.AddScoped<IUser, User>();
-            builder.Services.AddScoped<ITeam, Team>();
-            builder.Services.AddScoped<ITaskItem, TaskItem>();
+            builder.Services.AddDataLayer();
             
 
             //DI services BAL
@@ -87,7 +85,7 @@ using User = ToDoApp.DAL.Repository.Implementations.User;
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-
+           
 
             var app = builder.Build();
             await DataSeed.SeedSuperAdmin(app.Services);

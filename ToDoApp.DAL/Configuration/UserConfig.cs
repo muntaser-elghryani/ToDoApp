@@ -54,6 +54,7 @@ namespace ToDoApp.DAL.Configuration
                 .HasForeignKey(u => u.TeamId)
                 .OnDelete(DeleteBehavior.SetNull);
 
+          
 
         }
     }

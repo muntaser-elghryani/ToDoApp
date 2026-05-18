@@ -454,10 +454,6 @@
             "type": "string",
             "nullable": true
           },
-          "roleId": {
-            "type": "integer",
-            "format": "int32"
-          },
           "teamId": {
             "type": "integer",
             "format": "int32",

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ToDoApp.BAL.Exceptions;
 using ToDoApp.BAL.Interfaces;
 using ToDoApp.DAL.Entities;
 using ToDoApp.DAL.Repository.Interfaces;
@@ -20,7 +21,7 @@ namespace ToDoApp.BAL.Implementations
         {
             if (await _Team.NameExists(createTeamDto.Name))
             {
-                throw new Exception("Team Name already exists.");
+                throw new TeamAlreadyHasManagerException();
             }
 
             Team team = new Team 
