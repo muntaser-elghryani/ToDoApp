@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ToDoApp.BAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9533bcddf6538df30e93c5cc32913dbc14d500bb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71ef95e0449f703995f705fa20afcc1ec276115f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ToDoApp.BAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ToDoApp.BAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
